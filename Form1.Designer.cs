@@ -128,7 +128,7 @@
             // 
             this.updavail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.updavail.ForeColor = System.Drawing.Color.Red;
-            this.updavail.Location = new System.Drawing.Point(33, 197);
+            this.updavail.Location = new System.Drawing.Point(33, 221);
             this.updavail.Name = "updavail";
             this.updavail.Size = new System.Drawing.Size(806, 57);
             this.updavail.TabIndex = 6;
@@ -143,7 +143,7 @@
             this.yesdownloadbox.Controls.Add(this.label5);
             this.yesdownloadbox.Controls.Add(this.kbid);
             this.yesdownloadbox.Controls.Add(this.label7);
-            this.yesdownloadbox.Location = new System.Drawing.Point(38, 265);
+            this.yesdownloadbox.Location = new System.Drawing.Point(38, 289);
             this.yesdownloadbox.Name = "yesdownloadbox";
             this.yesdownloadbox.Size = new System.Drawing.Size(761, 215);
             this.yesdownloadbox.TabIndex = 7;
@@ -229,7 +229,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 492);
+            this.label2.Location = new System.Drawing.Point(32, 507);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 40);
             this.label2.TabIndex = 9;
@@ -238,7 +238,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(66, 493);
+            this.label6.Location = new System.Drawing.Point(66, 507);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(773, 50);
             this.label6.TabIndex = 10;
@@ -249,7 +249,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(66, 543);
+            this.label8.Location = new System.Drawing.Point(66, 559);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(773, 41);
             this.label8.TabIndex = 11;
@@ -257,7 +257,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(70, 588);
+            this.button1.Location = new System.Drawing.Point(70, 603);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 34);
             this.button1.TabIndex = 12;
@@ -267,7 +267,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(286, 588);
+            this.button2.Location = new System.Drawing.Point(286, 603);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(263, 34);
             this.button2.TabIndex = 13;
@@ -297,14 +297,14 @@
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(125, 26);
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(38, 257);
+            this.pictureBox2.Location = new System.Drawing.Point(38, 281);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(763, 2);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

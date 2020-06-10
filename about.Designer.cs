@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +50,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(13, 172);
+            this.label1.Location = new System.Drawing.Point(12, 192);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 75);
+            this.label1.Size = new System.Drawing.Size(417, 67);
             this.label1.TabIndex = 10;
             this.label1.Text = "Magic Updates is a Windows Updater application that generates Microsoft Update UR" +
     "Ls from where you can directly download updates and manually install them. ";
@@ -60,7 +61,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.Location = new System.Drawing.Point(13, 247);
+            this.label2.Location = new System.Drawing.Point(13, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(417, 26);
             this.label2.TabIndex = 11;
@@ -70,7 +71,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.Location = new System.Drawing.Point(26, 294);
+            this.label3.Location = new System.Drawing.Point(25, 314);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(375, 98);
             this.label3.TabIndex = 12;
@@ -79,11 +80,22 @@
     " prior permission of the author.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label4.Location = new System.Drawing.Point(12, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(417, 26);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Build. 0.1.4";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // about
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 501);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -103,5 +115,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

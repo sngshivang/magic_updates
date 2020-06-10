@@ -14,7 +14,7 @@ namespace MagicUpdates
 {
     public partial class initializer : Form
     {
-        private Object osver;
+        private Object osver,cbuildnum;
         public initializer()
         {
             InitializeComponent();
@@ -24,11 +24,13 @@ namespace MagicUpdates
         {
             try
             {
+                bool errortrip = false;
                 RegistryKey key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion");
                 if (key != null)
                 {
                     osver = key.GetValue("ReleaseId");
                     Object osnm = key.GetValue("ProductName");
+                    cbuildnum = key.GetValue("CurrentBuildNumber");
                     Object buildnum = key.GetValue("UBR");
                     Console.WriteLine(buildnum.ToString());
                     if (osver != null)
@@ -40,7 +42,20 @@ namespace MagicUpdates
                         nt.internetAsync_rst(1, dct);
 
                     }
+                    else
+                        errortrip = true;
 
+                }
+                else
+                    errortrip = true;
+                if (errortrip)
+                {
+
+                    DialogResult dr = MessageBox.Show("This app cannot run on this operating system due to a technical error.", "Unsupported Operating System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (dr == DialogResult.OK)
+                    {
+                        Environment.Exit(0);
+                    }
                 }
             }
             catch (Exception e)
@@ -62,11 +77,11 @@ namespace MagicUpdates
                 {
                     string ext = (string)ja[i];
                     JObject jo = JObject.Parse(ext);
-                    string oover = (string)jo["osid"];
+                    string oover = (string)jo["osver"];
                     string arch = (string)jo["arch"];
                     if (Environment.Is64BitOperatingSystem)
                         bit64 = true;
-                    if (osver != null && osver.ToString() == oover)
+                    if (osver != null && cbuildnum.ToString() == oover)
                     {
                         if ((bit64 == true && arch == "x86_64") || (bit64 == false && arch == "x86"))
                             trip = true;
@@ -89,7 +104,7 @@ namespace MagicUpdates
                     DialogResult dr = MessageBox.Show("This version of Windows is not supported by this application. MagicUpdates will exit now", "Unsupported Operating System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     if (dr == DialogResult.OK)
                     {
-                        //Environment.Exit(0);
+                        Environment.Exit(0);
                     }
 
                 }
