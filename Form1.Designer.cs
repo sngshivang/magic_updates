@@ -56,11 +56,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.magicupdnot = new System.Windows.Forms.NotifyIcon(this.components);
+            this.ctrlpanel = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.yesdownloadbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.ctrlpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -229,7 +232,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 507);
+            this.label2.Location = new System.Drawing.Point(6, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 40);
             this.label2.TabIndex = 9;
@@ -238,7 +241,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(66, 507);
+            this.label6.Location = new System.Drawing.Point(40, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(773, 50);
             this.label6.TabIndex = 10;
@@ -249,7 +252,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(66, 559);
+            this.label8.Location = new System.Drawing.Point(40, 66);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(773, 41);
             this.label8.TabIndex = 11;
@@ -257,7 +260,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(70, 603);
+            this.button1.Location = new System.Drawing.Point(44, 110);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 34);
             this.button1.TabIndex = 12;
@@ -267,7 +270,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(286, 603);
+            this.button2.Location = new System.Drawing.Point(260, 110);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(263, 34);
             this.button2.TabIndex = 13;
@@ -328,19 +331,28 @@
             this.magicupdnot.Visible = true;
             this.magicupdnot.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.magicupdnot_MouseDoubleClick);
             // 
+            // ctrlpanel
+            // 
+            this.ctrlpanel.Controls.Add(this.label2);
+            this.ctrlpanel.Controls.Add(this.label6);
+            this.ctrlpanel.Controls.Add(this.label8);
+            this.ctrlpanel.Controls.Add(this.button2);
+            this.ctrlpanel.Controls.Add(this.button1);
+            this.ctrlpanel.Location = new System.Drawing.Point(34, 510);
+            this.ctrlpanel.Name = "ctrlpanel";
+            this.ctrlpanel.Size = new System.Drawing.Size(826, 160);
+            this.ctrlpanel.TabIndex = 17;
+            this.ctrlpanel.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(891, 662);
+            this.ClientSize = new System.Drawing.Size(891, 682);
+            this.Controls.Add(this.ctrlpanel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.yesdownloadbox);
             this.Controls.Add(this.updavail);
@@ -363,6 +375,8 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.ctrlpanel.ResumeLayout(false);
+            this.ctrlpanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,6 +410,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.NotifyIcon magicupdnot;
+        private System.Windows.Forms.GroupBox ctrlpanel;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

@@ -80,6 +80,7 @@ namespace MagicUpdates
                                     msfturl.Text = mslnk;
                                     purl = mslnk;
                                     yesdownloadbox.Visible = true;
+                                    ctrlpanel.Visible = true;
 
                                 }
                                 else
@@ -87,6 +88,7 @@ namespace MagicUpdates
                                     updavail.Text = "Your Windows is already up to date as per the update list of MagicUpdates";
                                     updavail.ForeColor = Color.Green;
                                     yesdownloadbox.Visible = false;
+                                    ctrlpanel.Visible = false;
                                 }
 
                             }
@@ -94,6 +96,8 @@ namespace MagicUpdates
                             {
                                 updavail.Text = "MagicUpdates cannot continue due to a Windows version mismatch!";
                                 updavail.ForeColor = Color.Red;
+                                yesdownloadbox.Visible = false;
+                                ctrlpanel.Visible = false;
                             }
                         }
                     }
