@@ -69,7 +69,6 @@ namespace MagicUpdates
             {
                 if (resp != "ERR") { 
                 bool trip = false;
-                bool bit64 = false;
                 universals.repodat = resp;
                 JArray ja = JArray.Parse(resp);
                 int sze = ja.Count;
@@ -80,10 +79,10 @@ namespace MagicUpdates
                     string oover = (string)jo["osver"];
                     string arch = (string)jo["arch"];
                     if (Environment.Is64BitOperatingSystem)
-                        bit64 = true;
+                        universals.bit64 = true;
                     if (osver != null && cbuildnum.ToString() == oover)
                     {
-                        if ((bit64 == true && arch == "x86_64") || (bit64 == false && arch == "x86"))
+                        if ((universals.bit64 == true && arch == "x86_64") || (universals.bit64 == false && arch == "x86"))
                             trip = true;
                         break;
                     }

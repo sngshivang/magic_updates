@@ -64,7 +64,12 @@ namespace MagicUpdates
                         string kbidr = (string)jo["kbid"];
                         string ldat = (string)jo["msdat"];
                         string mslnk = (string)jo["mslnk"];
-                        if (osver != null && osver.ToString() == osid)
+                        string arch = (string)jo["arch"];
+                        Console.WriteLine(arch);
+                        bool temp = false;
+                        if (arch == "x86_64")
+                            temp = true;
+                        if (osver != null && osver.ToString() == osid && temp == universals.bit64)
                         {
                            if (osverf == (string)cbuildnum)
                             {

@@ -9,5 +9,6 @@ namespace MagicUpdates
     class universals
     {
         public static string repodat = null;
+        public static bool bit64 = false;
     }
 }
